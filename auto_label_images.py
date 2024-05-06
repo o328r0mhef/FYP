@@ -139,24 +139,18 @@ def save_bounding_box_data(image_names, class_names_list, bounding_boxes_list, i
             })
 
         # After generating all labelling data, save to file
-        with open('C:/Users/Dylan/FYP - ML Code Local/Test_EI_Labelling/bounding_boxes.labels', 'w') as file:
+        with open('Generated_file_location', 'w') as file:
             json.dump(data, file, indent=4)
 
 
 # Define the directory containing images
-image_directory = "C:/Users/Dylan/FYP - ML Code Local/Test_EI_Labelling"
+image_directory = "Image_directory"
 
 # Define parameters
-wanted_classes = ['Dog', 'Pillow']
+wanted_classes = ['Dog', 'Pillow'] # Example list of classes to define - ensure compatible with pre-trained model dataset
 minimum_confidence = 0.2
 
 # Process images in the directory
 image_names, all_classes, all_bounding_boxes = process_images_in_directory(image_directory, wanted_classes, minimum_confidence)
 
 save_bounding_box_data(image_names, all_classes, all_bounding_boxes)
-
-
-# Print the lists
-# print("Image Names:", image_names)
-# print("Classes:", all_classes)
-# print("Bounding Boxes:", all_bounding_boxes)
