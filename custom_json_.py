@@ -2,6 +2,17 @@ import json
 from pycocotools.coco import COCO
 
 def generate_filtered_json(input_json_file, output_json_file, classes):
+    """
+    Generate a filtered version of a COCO JSON file containing only annotations for specified classes.
+
+    Args:
+        input_json_file (str): Path to the input COCO JSON file.
+        output_json_file (str): Path to save the filtered COCO JSON file.
+        classes (list): List of class names (strings) to include in the filtered annotations.
+
+    Returns:
+        None
+    """
     # Load the COCO JSON file
     coco = COCO(input_json_file)
 
@@ -39,7 +50,7 @@ def generate_filtered_json(input_json_file, output_json_file, classes):
     print("Filtered annotations saved to", output_json_file)
 
 # Example usage
-input_json_file = "C:/Users/Dylan/fiftyone/coco-2017/raw/instances_train2017.json"
-output_json_file = 'C:/Users/Dylan/FYP - ML Code Local/five_training_labels.json'
-classes = classes=["dog", "car", "bench", "person", "chair"]  # List of classes you want to include
+input_json_file = "full_json_file_directory"
+output_json_file = 'output_json_directory'
+classes = ["dog", "car", "bench", "person", "chair"]  # List of classes to include from the 80 classes available
 generate_filtered_json(input_json_file, output_json_file, classes)
