@@ -1,1 +1,34 @@
-This is a readme file 
+Tacton Machine Learning Executable
+
+Description:
+This Python script, Tacton_ML_executable.py, is designed to operate on the Nicla Vision board via the OpenMV IDE. This script uses the motor.py library.
+
+Author:
+Dylan Turland Cowell
+
+Date Created:
+11-May-2024
+
+Hardware Required:
+    Nicla Vision
+    PCA9546A multiplexer
+    DRV2605L motor driver x3
+    Seeed Studio haptic motor x3
+    Tactile button (and pull-up resistor) connected to pin D0
+
+Functionality:
+    Operate a haptic electronic travel aid.
+     Two main modes: 'distance warning' and 'object detection'
+    'Distance warning' mode utilizes the VL53L1X Time-of-Flight (ToF) sensor and the center motor to provide distance alerts.
+    'Object detection' mode uses a trained FOMO MobileNet model from Edge Impulse to detect objects and trigger corresponding tactile responses.
+
+
+Motor Library
+
+Description:
+This Python script contains a library for controlling the motors used in the main executable script. It provides functions for initialising motors, setting waveforms, and triggering motor actions.
+
+Functionality:
+
+    Provides functions for controlling the DRV2605L motor driver
+    Includes functions for setting modes, waveforms, and operating PCA9546A multiplexer
