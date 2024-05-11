@@ -2,7 +2,8 @@
 File: auto_label_images.py
 Author: Dylan Turland Cowell
 Date Created: 11-May-2024
-Description: Using a pre trained model from tensor_hub, this script generates a bounding box file in 'Edge Impulse Bounding Box Labelling' format, given the desired classes.
+Description: Using a pre trained model from tensor_hub, this script generates a bounding box file in 
+'Edge Impulse Bounding Box Labelling' format, given the desired classes.
 """
 
 import os
