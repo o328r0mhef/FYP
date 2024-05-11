@@ -1,3 +1,10 @@
+"""
+File: change_resolution.py
+Author: Dylan Turland Cowell
+Date Created: 11-May-2024
+Description: Iterate through a direcetory of images to reduce the peak axis resolution.
+"""
+
 import os
 from PIL import Image
 
