@@ -1,11 +1,18 @@
+"""
+File: auto_label_images.py
+Author: Dylan Turland Cowell
+Date Created: 11-May-2024
+Description: Using a pre trained model from tensor_hub, this script generates a bounding box file in 'Edge Impulse Bounding Box Labelling' format, given the desired classes.
+"""
+
 import os
 import tensorflow as tf
 import tensorflow_hub as hub
 import json
 
 # Receive trained model
-# module_handle = "https://tfhub.dev/google/openimages_v4/ssd/mobilenet_v2/1" 
-module_handle = "https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_resnet_v2/1"
+# module_handle = "https://tfhub.dev/google/openimages_v4/ssd/mobilenet_v2/1"              # Less accurate but fast
+module_handle = "https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_resnet_v2/1" # Accurate but slow
 # Set trained model, 'detector' with default weightings (openimages classifications)
 detector = hub.load(module_handle).signatures['default']
 
@@ -147,8 +154,8 @@ def save_bounding_box_data(image_names, class_names_list, bounding_boxes_list, i
 image_directory = "Image_directory"
 
 # Define parameters
-wanted_classes = ['Dog', 'Pillow'] # Example list of classes to define - ensure compatible with pre-trained model dataset
-minimum_confidence = 0.2
+wanted_classes = ['Dog', 'Pillow'] # Example list of classes to define - ensure compatible with pre-trained model dataset (e.g. Coco has 80 classes and faster_rcnn has 600)
+minimum_confidence = 0.7
 
 # Process images in the directory
 image_names, all_classes, all_bounding_boxes = process_images_in_directory(image_directory, wanted_classes, minimum_confidence)
