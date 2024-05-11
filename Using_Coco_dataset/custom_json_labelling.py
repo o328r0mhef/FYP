@@ -1,3 +1,11 @@
+"""
+File: custom_json_labelling.py
+Author: Dylan Turland Cowell
+Date Created: 11-May-2024
+Description: This script is designed to be used with the 'fiftyone' library. After using fiftyone to download specific images and classes, 
+             this script edits the .json Coco labelling file to be used with the downloaded images.
+"""
+
 import json
 from pycocotools.coco import COCO
 
