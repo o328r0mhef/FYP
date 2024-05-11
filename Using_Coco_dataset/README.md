@@ -9,7 +9,7 @@ Scripts
 
 2. change_resolution.py
 
-    Description: This script iterates through a directory of downloaded images to reduce their resolution.
+    Description: This script iterates through a directory of downloaded images to reduce their peak axis resolution (640 from Coco 2017 dataset) to a new defined resolution.
 
     Dependencies:
         os,
