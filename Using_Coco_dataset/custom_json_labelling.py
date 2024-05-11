@@ -52,5 +52,5 @@ def generate_filtered_json(input_json_file, output_json_file, classes):
 # Example usage
 input_json_file = "full_json_file_directory"
 output_json_file = 'output_json_directory'
-classes = ["dog", "car", "bench", "person", "chair"]  # List of classes to include from the 80 classes available
+classes = ["dog", "car", "bench", "person", "chair"]  # List of classes to include from the 80 classes available in the Coco dataset
 generate_filtered_json(input_json_file, output_json_file, classes)
