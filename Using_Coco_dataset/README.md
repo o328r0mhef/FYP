@@ -4,7 +4,7 @@ Scripts
     Description: This script should be used with the fiftyone library. After downloading the desired amount of images and classes, it generates a new labelling file compatible with Edge Impulse. Fiftyone attempts this, but the labelling file output is not directly compatible with Edge Impulse.
 
     Dependencies:
-        json
+        json,
         pycocotools
 
 2. change_resolution.py
@@ -12,8 +12,8 @@ Scripts
     Description: This script iterates through a directory of downloaded images to reduce their peak axis resolution (640 from Coco 2017 dataset) to a new defined resolution.
 
     Dependencies:
-        os
-        PIL (Python Imaging Library)
+        os,
+        PIL
 
 3. adjust_labelling_to_new_resolution.py
 
