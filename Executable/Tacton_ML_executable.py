@@ -244,7 +244,7 @@ def calc_period(value):
 
 async def main():
     """
-    Main coroutine to run operate the event loop, executing multiple tasks concurrently.
+    Main coroutine to run the event loop, executing multiple tasks concurrently.
     """
 
     await uasyncio.gather(detect_objects(), sensor_reading(), handle_button_press())
